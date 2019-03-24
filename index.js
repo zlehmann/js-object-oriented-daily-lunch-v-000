@@ -78,6 +78,10 @@ class Meal {
     }
     return result;
   }
+
+  static byPrice() {
+
+  }
 }
 
 let deliveryId = 0;
