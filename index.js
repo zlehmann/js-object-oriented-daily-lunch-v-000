@@ -71,12 +71,15 @@ class Meal {
   }
 
   customers() {
-    return store.customers.filter(
-      function(customer) {
-        console.log(customer.meals());
-        return customer.meals() === this
-      }.bind(this)
-    );
+    let deliveries = this.deliveries();
+    let result = [];
+    for (let i = 0; i < deliveries.length; i++) {
+      result.push(store.customers.find(
+        function(customer) {
+          return customer.id === deliveries[i].customerId;
+        }
+      ););
+    }.bind(this);
   }
 }
 
