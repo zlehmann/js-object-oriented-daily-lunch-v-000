@@ -20,6 +20,16 @@ class Customer {
   }
 }
 
+let mealId = 0;
+class Meal {
+  constructor(title, price) {
+    this.id = ++mealId;
+    this.title = title;
+    this.price = Number(price);
+    store.meals.push(this);
+  }
+}
+
 class Delivery {
 
 }
