@@ -57,6 +57,7 @@ class Customer {
     for (let i = 0; i < this.meals().length; i++) {
       let result =+ this.meals()[i].price;
     }
+    console.log(result);
     return result;
   }
 }
