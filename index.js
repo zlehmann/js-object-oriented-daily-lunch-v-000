@@ -73,13 +73,7 @@ class Meal {
   customers() {
     let deliveries = this.deliveries();
     let result = [];
-    for (let i = 0; i < deliveries.length; i++) {
-      result.push(store.customers.find(
-        function(customer) {
-          return customer.id === deliveries[i].customerId;
-        }
-      ););
-    }.bind(this);
+
   }
 }
 
