@@ -80,7 +80,8 @@ class Meal {
   }
 
   static byPrice() {
-    return store.meals.sort((a,b) => (a.price > b.price) ? 1 : -1);
+    let sortedMeals = store.meals.sort((a,b) => (a.price > b.price) ? 1 : -1);
+    return sortedMeals;
   }
 }
 
