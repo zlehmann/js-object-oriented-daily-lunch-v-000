@@ -16,6 +16,14 @@ class Neighborhood {
       }.bind(this)
     );
   }
+
+  customers() {
+    return store.customers.filter(
+      function(customer) {
+        return customer.neighborhoodId === this.id;
+      }
+    );
+  }
 }
 
 let customerId = 0;
