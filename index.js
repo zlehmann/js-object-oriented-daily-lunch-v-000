@@ -51,6 +51,14 @@ class Customer {
     }
     return result;
   }
+
+  totalSpent() {
+    let result = 0;
+    for (let i = 0; i < this.meals().length; i++) {
+      let result += this.meals()[i].price;
+    }
+    return result;
+  }
 }
 
 let mealId = 0;
