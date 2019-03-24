@@ -73,7 +73,7 @@ class Meal {
   customers() {
     return store.customers.filter(
       function(customer) {
-        return customer.meal() === this
+        return customer.meals() === this
       }.bind(this)
     );
   }
