@@ -15,6 +15,7 @@ class Neighborhood {
         return delivery.neighborhoodId === this.id;
       }.bind(this)
     );
+    console.log(store.deliveries());
     console.log(result);
     return result;
   }
