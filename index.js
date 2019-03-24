@@ -54,11 +54,13 @@ class Customer {
 
   totalSpent() {
     let result = 0;
-    for (let i = 0; i < this.meals().length; i++) {
-      let result = result + this.meals()[i].price;
-      console.log(result);
+    let prices = []
+    for (let i=0; i < this.meals().length; i++) {
+      prices.push(this.meals()[i].price);
     }
-    console.log(result);
+    const add = (a,b) =>
+      a+b 
+    result = prices.reduce(add);
     return result;
   }
 }
