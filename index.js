@@ -10,11 +10,13 @@ class Neighborhood {
   }
 
   deliveries() {
-    return store.deliveries.filter(
+    let result = store.deliveries.filter(
       function(delivery) {
         return delivery.neighborhoodId === this.id;
       }.bind(this)
     );
+    console.log(result);
+    return result;
   }
 }
 
