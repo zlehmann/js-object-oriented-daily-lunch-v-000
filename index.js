@@ -49,7 +49,6 @@ class Customer {
     for (let i = 0; i < deliveries.length; i++) {
       result.push(deliveries[i].meal());
     }
-    console.log(result);
     return result;
   }
 }
@@ -61,6 +60,14 @@ class Meal {
     this.title = title;
     this.price = Number(price);
     store.meals.push(this);
+  }
+
+  deliveries() {
+    return store.deliveries.filter(
+      function(delivery) {
+        return delivery.meal() === this
+      }.bind(this)
+    );
   }
 }
 
