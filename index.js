@@ -69,6 +69,14 @@ class Meal {
       }.bind(this)
     );
   }
+
+  customers() {
+    return store.customers.filter(
+      function(customer) {
+        return customer.meal() === this
+      }.bind(this)
+    );
+  }
 }
 
 let deliveryId = 0;
