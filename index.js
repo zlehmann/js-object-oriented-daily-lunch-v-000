@@ -55,7 +55,7 @@ class Customer {
   totalSpent() {
     let result = 0;
     for (let i = 0; i < this.meals().length; i++) {
-      console.log(this.meals()[i].price);
+      console.log(this.meals()[i]);
       let result =+ this.meals()[i].price;
     }
     return result;
