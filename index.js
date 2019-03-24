@@ -59,7 +59,7 @@ class Customer {
       prices.push(this.meals()[i].price);
     }
     const add = (a,b) =>
-      a+b 
+      a+b
     result = prices.reduce(add);
     return result;
   }
