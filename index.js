@@ -73,6 +73,7 @@ class Meal {
   customers() {
     return store.customers.filter(
       function(customer) {
+        console.log(customer.meals());
         return customer.meals() === this
       }.bind(this)
     );
