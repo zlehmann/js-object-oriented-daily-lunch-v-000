@@ -81,7 +81,7 @@ class Meal {
 
   static byPrice() {
     let sortedMeals = store.meals.sort((a,b) => (a.price > b.price) ? 1 : -1);
-    console.log(sortedMeals);
+    return sortedMeals;
   }
 }
 
