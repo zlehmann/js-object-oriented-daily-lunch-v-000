@@ -42,6 +42,10 @@ class Customer {
       }.bind(this)
     );
   }
+
+  meals() {
+    console.log(this.deliveries());
+  }
 }
 
 let mealId = 0;
