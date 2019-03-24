@@ -55,4 +55,12 @@ class Delivery {
     this.customerId = customerId;
     store.deliveries.push(this);
   }
+
+  meal() {
+    return store.meals.find(
+      function(meal) {
+        return meal.id === this.mealId;
+      }.bind(this)
+    );
+  }
 }
