@@ -44,7 +44,13 @@ class Customer {
   }
 
   meals() {
-    console.log(this.deliveries());
+    let deliveries = this.deliveries();
+    let result = [];
+    for (let i = 0; i < deliveries.length; i++) {
+      result.push(deliveries[i].meal());
+    }
+    console.log(result);
+    return result;
   }
 }
 
