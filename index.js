@@ -29,7 +29,9 @@ class Neighborhood {
     let deliveries = this.deliveries();
     let result = [];
     for (let i = 0; i < deliveries.length; i++) {
-      result.push(deliveries[i].meal());
+      if (result.find(deliveries[i].meal()) === undefinded) {
+        result.push(deliveries[i].meal());
+      }
     }
     return result;
   }
