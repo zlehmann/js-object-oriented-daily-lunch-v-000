@@ -24,6 +24,15 @@ class Neighborhood {
       }.bind(this)
     );
   }
+
+  meals() {
+    let deliveries = this.deliveries();
+    let result = [];
+    for (let i = 0; i < deliveries.length; i++) {
+      result.push(deliveries[i].meal());
+    }
+    return result;
+  }
 }
 
 let customerId = 0;
