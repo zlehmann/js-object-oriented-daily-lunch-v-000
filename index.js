@@ -30,7 +30,7 @@ class Neighborhood {
     let result = [];
     for (let i = 0; i < deliveries.length; i++) {
       if (result.find(deliveries[i].meal() === undefinded) {
-        result.push(deliveries[i].meal);
+        result.push(deliveries[i].meal());
       }
     }
     return result;
