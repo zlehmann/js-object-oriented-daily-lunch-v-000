@@ -29,7 +29,7 @@ class Neighborhood {
     let deliveries = this.deliveries();
     let result = [];
     for (let i = 0; i < deliveries.length; i++) {
-
+      console.log(deliveries[i]);
     }
     return result;
   }
